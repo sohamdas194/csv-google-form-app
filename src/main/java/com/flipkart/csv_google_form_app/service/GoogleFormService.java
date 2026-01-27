@@ -25,7 +25,7 @@ public class GoogleFormService {
 
     private static final String NO_DEFECT = "No Defect";
 
-    private static final String FORM_ID = "1FAIpQLSef89B0j2OGItZtl4wyDZ6ZcO8Y4XLuj1GGr2QZhgFgMuOyPQ";
+    private static final String FORM_ID = "************";
 
     private static final String FORM_URL =
             "https://docs.google.com/forms/d/e/" + FORM_ID + "/formResponse";
