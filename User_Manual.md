@@ -119,7 +119,7 @@ While uploading:
 * Status shows **Upload failed**
 * Log displays error message
 
-### 📸 Screenshot Placeholder — Upload Failure Screen
+### 📸 Upload Failure Screen
 
 ![img_15.png](src/main/resources/manual/img/img_15.png)
 
@@ -139,7 +139,7 @@ pass_rows_YYYYMMDD_HHMMSS.csv
 
 Contains successfully submitted rows.
 
-### 📸 Screenshot Placeholder — PASS File
+### 📸 PASS File
 
 ![img_6.png](src/main/resources/manual/img/img_6.png)
 ---
@@ -152,7 +152,7 @@ fail_rows_YYYYMMDD_HHMMSS.csv
 
 Contains failed rows plus error reason.
 
-### 📸 Screenshot Placeholder — FAIL File
+### 📸 FAIL File
 
 ![img_7.png](src/main/resources/manual/img/img_7.png)
 
