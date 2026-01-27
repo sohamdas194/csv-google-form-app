@@ -375,7 +375,7 @@ mvn clean package
 ### Run JAR
 
 ```bash
-java -Djava.awt.headless=false -jar target/app.jar
+java -jar target/app.jar
 ```
 
 ---
