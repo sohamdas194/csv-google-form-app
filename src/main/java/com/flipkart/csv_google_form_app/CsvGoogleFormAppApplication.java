@@ -4,7 +4,6 @@ import com.flipkart.csv_google_form_app.ui.CsvUploaderUI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.event.EventListener;
 
 import javax.swing.*;

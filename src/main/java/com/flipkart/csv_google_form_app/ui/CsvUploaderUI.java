@@ -20,10 +20,11 @@ public class CsvUploaderUI extends JFrame {
     private static final String PORT = "8030";
     private static final String API_UPLOAD = "http://localhost:" + PORT + "/api/upload";
 
-    private JTextArea logArea = new JTextArea();
-    private JLabel statusLabel = new JLabel("Ready");
-    private JButton uploadBtn = new JButton("Upload CSV");
+    private final JTextArea logArea = new JTextArea();
+    private final JLabel statusLabel = new JLabel("Ready");
+    private final JButton uploadBtn = new JButton("Upload CSV");
 
+    @SuppressWarnings("unused")
     public CsvUploaderUI() {
         setTitle("CSV → Google Form (Spring Boot Unified)");
         setSize(520, 380);
