@@ -167,6 +167,8 @@ src/main/java/com/example/csvapp/
  ├── CsvApplication.java        # Spring Boot launcher
  ├── controller/
  │    └── CsvUploadController.java
+ ├── constants/
+ │    └── FormInputIDs.java
  ├── service/
  │    └── GoogleFormService.java
  └── ui/
@@ -355,12 +357,13 @@ RC Kolkata,WSN123,CN9982,CPR111,Fail,"Missing WSN"
 
 ### Key Classes
 
-| Class               | Responsibility         |
-| ------------------- | ---------------------- |
-| CsvApplication      | App launcher           |
-| CsvUploaderUI       | Desktop UI             |
-| CsvUploadController | File handling API      |
-| GoogleFormService   | Google Form submission |
+| Class               | Responsibility                 |
+|---------------------|--------------------------------|
+| CsvApplication      | App launcher                   |
+| CsvUploaderUI       | Desktop UI                     |
+| CsvUploadController | File handling API              |
+| GoogleFormService   | Google Form submission         |
+| FormInputIDs        | Stores Google form's input IDs |
 
 ---
 
