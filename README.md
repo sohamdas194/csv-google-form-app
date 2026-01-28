@@ -378,7 +378,7 @@ mvn clean package
 ### Run JAR
 
 ```bash
-java -jar target/app.jar
+java -Djava.awt.headless=false -jar target/csv-google-form-app-0.0.1-SNAPSHOT.jar
 ```
 
 ---

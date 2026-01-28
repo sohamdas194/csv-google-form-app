@@ -29,7 +29,7 @@ This guide is intended for **business users, operations teams, and QA teams**.
 2. OR run via command line:
 
 ```bash
-java -jar csv-uploader.jar
+java -Djava.awt.headless=false -jar csv-google-form-app-0.0.1-SNAPSHOT.jar
 ```
 
 ## Expected Result
