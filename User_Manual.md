@@ -196,7 +196,7 @@ Mock Mode simulates form submission.
 ### Enable Mock Mode
 
 ```bash
-java -Dmock.google.forms=true -jar csv-uploader.jar
+java -Dmock.google.forms=true -Djava.awt.headless=false -jar csv-google-form-app-0.0.1-SNAPSHOT.jar
 ```
 
 ### When To Use
