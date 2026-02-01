@@ -13,22 +13,39 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 import static com.flipkart.csv_google_form_app.constants.FormInputIDs.*;
 
 @Service
 public class GoogleFormService {
 
-//    private static final String HAR_RC = "Haringhata";
-
-    private static final String PV_PASS = "Pass";
-    private static final String PV_FAIL = "Fail";
-
-    private static final String NO_DEFECT = "No Defect";
-
-    private static final String FORM_ID = "1FAIpQLSef89B0j2OGItZtl4wyDZ6ZcO8Y4XLuj1GGr2QZhgFgMuOyPQ";
+    private static final String FORM_ID = "1FAIpQLScBg5Z7vndz_8-z4zTZvgbYfKyVNkqgWinXcpslljMKTADe8w";
 
     private static final String FORM_URL =
             "https://docs.google.com/forms/d/e/" + FORM_ID + "/formResponse";
+
+    public static final String[] VERTICALS = {
+            "Apparel (All Clothing)",
+            "Footwear/Sandal",
+            "Helmet",
+            "Mosquito Net",
+            "Racquet (Badminton)"
+    };
+
+    public static final String[] PV_REMARKS_AFTER_REFINISHING = {
+            "No issues (PASS)",
+            "MBT PASS",
+            "Major Stains",
+            "Tag issue",
+            "Damaged product",
+            "Abused product (Non-Refinishable)",
+            "Catalog issue",
+            "Fake/Wrong Product"
+    };
+    public static final String OTHER_OPTION = "__other_option__";
+    public static final String OTHER_OPTION_RESPONSE = ".other_option_response";
 
     private final RestTemplate restTemplate = new RestTemplate();
 
@@ -73,17 +90,29 @@ public class GoogleFormService {
     // ================= FORM DATA =================
     private MultiValueMap<String, String> buildFormData(CSVRecord record) {
 
-        String pvReason = safe(record, "PV Reason");
-        String result = pvReason.equals(NO_DEFECT) ? PV_PASS : PV_FAIL;
-
         MultiValueMap<String, String> formData = new LinkedMultiValueMap<>();
-//        formData.add(RC_NAME.getInputID(), HAR_RC);
-        formData.add(RC_NAME.getInputID(), safe(record, "RC Name"));
-        formData.add(WSN.getInputID(), safe(record, "Actual WSN"));
-        formData.add(CONSIGNMENT_NO.getInputID(), safe(record, "Consignment ID"));
-        formData.add(CASPER.getInputID(), safe(record, "Casper"));
-        formData.add(PV_REASON.getInputID(), pvReason);
-        formData.add(PV_REMARK.getInputID(), result);
+        formData.add(WSN.getInputID(), safe(record, "WSN"));
+        formData.add(BRAND_NAME.getInputID(), safe(record, "Brand Name"));
+        formData.add(SELLER_ID.getInputID(), safe(record, "Seller ID"));
+
+        Optional<String> vertical = Arrays.stream(VERTICALS).filter(vertcl -> vertcl.equals(safe(record, "Vertical"))).findFirst();
+        if(vertical.isPresent()) {
+            formData.add(VERTICAL.getInputID(), vertical.get());
+        } else {
+            formData.add(VERTICAL.getInputID(), OTHER_OPTION);
+            formData.add(VERTICAL.getInputID() + OTHER_OPTION_RESPONSE, safe(record, "Vertical"));
+        }
+
+
+        formData.add(REFINISHING_TASK.getInputID(), safe(record, "Refinishing task performed"));
+
+        Optional<String> pv_remark = Arrays.stream(PV_REMARKS_AFTER_REFINISHING).filter(remark -> remark.equals(safe(record, "PV remarks after Refinishing"))).findFirst();
+        if(pv_remark.isPresent()) {
+            formData.add(PV_REMARK.getInputID(), pv_remark.get());
+        } else {
+            formData.add(PV_REMARK.getInputID(), OTHER_OPTION);
+            formData.add(PV_REMARK.getInputID() + OTHER_OPTION_RESPONSE, safe(record, "PV remarks after Refinishing"));
+        }
 
         return formData;
     }

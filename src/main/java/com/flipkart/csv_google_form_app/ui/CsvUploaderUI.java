@@ -26,7 +26,7 @@ public class CsvUploaderUI extends JFrame {
 
     @SuppressWarnings("unused")
     public CsvUploaderUI() {
-        setTitle("CSV → Google Form (Spring Boot Unified)");
+        setTitle("CSV → Google Form (RF Refinishing)");
         setSize(520, 380);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 

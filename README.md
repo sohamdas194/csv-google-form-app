@@ -215,19 +215,20 @@ mvn spring-boot:run
 
 ### Required Columns
 
-| Column Name    | Required |
-| -------------- | -------- |
-| RC Name        | Yes      |
-| Actual WSN     | Yes      |
-| Consignment ID | Yes      |
-| Casper         | Yes      |
-| PV Reason      | Yes      |
+| Column Name                   | Required |
+|-------------------------------| -------- |
+| WSN                           | Yes      |
+| Brand Name                    | Yes      |
+| Seller ID                     | Yes      |
+| Vertical                      | Yes      |
+| Refinishing task performed    | Yes      |
+| PV remarks after Refinishing  | Yes      |
 
 ### Example CSV
 
 ```csv
-RC Name,Actual WSN,Consignment ID,Casper,PV Reason
-RC Kolkata,WSN123,CN9982,CPR111,No Defect
+WSN,Brand Name,Seller ID,Vertical,Refinishing task performed,PV remarks after Refinishing
+1IY4PS_I,RED TAPE,e5c763d953f74a07,Footwear/Sandal,Spotting,No issues (PASS)
 ```
 
 ---
@@ -265,13 +266,13 @@ https://docs.google.com/forms/d/e/<FORM_ID>/formResponse
 
 ### CSV → Google Form Mapping
 
-| CSV Column     | Google Entry ID |
-| -------------- | --------------- |
-| RC Name        | entry.xxxxxx    |
-| Actual WSN     | entry.xxxxxx    |
-| Consignment ID | entry.xxxxxx    |
-| Casper         | entry.xxxxxx    |
-| PV Reason      | entry.xxxxxx    |
+| CSV Column                    | Google Entry ID |
+|-------------------------------| --------------- |
+| WSN                           | entry.xxxxxx    |
+| Brand Name                    | entry.xxxxxx    |
+| Seller ID                     | entry.xxxxxx    |
+| Refinishing task performed    | entry.xxxxxx    |
+| PV remarks after Refinishing  | entry.xxxxxx    |
 
 ---
 
