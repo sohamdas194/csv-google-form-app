@@ -173,19 +173,20 @@ Contains failed rows plus error reason.
 
 ## Required Columns
 
-| Column Name    | Mandatory |
-| -------------- | --------- |
-| RC Name        | Yes       |
-| Actual WSN     | Yes       |
-| Consignment ID | Yes       |
-| Casper         | Yes       |
-| PV Reason      | Yes       |
+| Column Name                   | Required |
+|-------------------------------| -------- |
+| WSN                           | Yes      |
+| Brand Name                    | Yes      |
+| Seller ID                     | Yes      |
+| Vertical                      | Yes      |
+| Refinishing task performed    | Yes      |
+| PV remarks after Refinishing  | Yes      |
 
 ### Sample CSV
 
 ```csv
-RC Name,Actual WSN,Consignment ID,Casper,PV Reason
-RC Kolkata,WSN123,CN12345,CPR111,No Defect
+WSN,Brand Name,Seller ID,Vertical,Refinishing task performed,PV remarks after Refinishing
+1IY4PS_I,RED TAPE,e5c763d953f74a07,Footwear/Sandal,Spotting,No issues (PASS)
 ```
 
 ---
