@@ -266,13 +266,14 @@ https://docs.google.com/forms/d/e/<FORM_ID>/formResponse
 
 ### CSV → Google Form Mapping
 
-| CSV Column                    | Google Entry ID |
-|-------------------------------| --------------- |
-| WSN                           | entry.xxxxxx    |
-| Brand Name                    | entry.xxxxxx    |
-| Seller ID                     | entry.xxxxxx    |
-| Refinishing task performed    | entry.xxxxxx    |
-| PV remarks after Refinishing  | entry.xxxxxx    |
+| CSV Column                   | Google Entry ID |
+|------------------------------| --------------- |
+| WSN                          | entry.xxxxxx    |
+| Brand Name                   | entry.xxxxxx    |
+| Seller ID                    | entry.xxxxxx    |
+| Vertical                     | entry.xxxxxx    |
+| Refinishing task performed   | entry.xxxxxx    |
+| PV remarks after Refinishing | entry.xxxxxx    |
 
 ---
 
