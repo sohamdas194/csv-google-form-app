@@ -2,12 +2,12 @@
 
 A **unified desktop + backend application** that allows users to upload CSV files via a Java Swing UI, processes rows using Spring Boot, submits data to Google Forms, and generates PASS/FAIL reports with timestamps.
 
-🤖 AI Disclosure: Parts of this project were drafted, refactored, or optimized with the assistance of Google Gemini and Chatgpt. The final logic, testing, and verification were performed entirely by the human author.
-
 This project runs as a **single executable JAR** that launches both:
 
 * Spring Boot REST API
 * Embedded Java Swing UI
+
+🤖 AI Disclosure: Parts of this project were drafted, refactored, or optimized with the assistance of Google Gemini and Chatgpt. The final logic, testing, and verification were performed entirely by the human author.
 
 ---
 
