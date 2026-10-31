@@ -7,6 +7,8 @@ This project runs as a **single executable JAR** that launches both:
 * Spring Boot REST API
 * Embedded Java Swing UI
 
+🤖 AI Disclosure: Parts of this project were drafted, refactored, or optimized with the assistance of Google Gemini and Chatgpt. The final logic, testing, and verification were performed entirely by the human author.
+
 ---
 
 # 📌 Table of Contents
